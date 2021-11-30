@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root{
+  --bg-body: hsl(233, 47%, 7%);
+  --bg-card: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+  --font-1:font-family:'Inter', sans-serif;
+  --font-2:font-family: 'Lexend Deca', sans-serif;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--bg-body);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 4rem;
+  color: white;
+}
+
+.container{
+  height:310px;
+  max-width: 768px;
+}
+
+.card{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  background-color: var(--bg-card);
+  border-radius: 8px;
+}
+
+.title{
+  padding: 3rem 4rem 0 3rem;
+  font-family:'Inter', sans-serif;
+}
+
+.accent{
+  color: var(--soft-violet);
+}
+
+.lead{
+  padding: 1rem 0;
+  font-size: 11px;
+  line-height: 1rem;
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+ul{
+  display:flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+li{
+  list-style-type: none;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.num{
+  color: white;
+  display: block;
+  text-transform: none;
+  font-family: "Inter",sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+
+.img{
+  border-radius: 0 8px 8px 0;
+  position: relative;
+  height: 310px;
+}
+
+img{
+  border-radius: 0 8px 8px 0;
+  height: 100%;
+  width: 100%
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsla(277, 64%, 61%,0.6);
+  border-radius: 0 8px 8px 0;
+  height: 100%;
+  width: 100%;
+}
+
+@media(max-width:768px){
+    .container{
+        height: 100%;
+        width: 80%;
+        margin: 3rem auto 0;
+    }
+    .card{
+        display:flex;
+        flex-direction: column-reverse;
+    }
+
+    .img{
+      border-radius: 8px 8px 0 0 ;
+    }
+    
+    .overlay{
+      border-radius: 8px 8px 0 0;
+    }
+
+    img{
+       border-radius: 8px 8px 0 0; 
+    }
+
+    .title{
+      padding: 1.5rem 2rem 0;
+      text-align: center;
+    }
+    .lead{
+    }
+    ul{
+      display: block;
+    }
+    li{
+      padding: 1rem 0;
+      display: block;
+    }
+    
+}
